@@ -1,0 +1,84 @@
+azure-arm: output will be in this color.
+
+==> azure-arm: Running builder ...
+==> azure-arm: Getting tokens using client secret
+==> azure-arm: Getting tokens using client secret
+    azure-arm: Creating Azure Resource Manager (ARM) client ...
+==> azure-arm: WARNING: Zone resiliency may not be supported in west europe, checkout the docs at https://docs.microsoft.com/en-us/azure/availability-zones/
+==> azure-arm: Creating resource group ...
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> Location          : 'west europe'
+==> azure-arm:  -> Tags              :
+==> azure-arm:  ->> Project : DevOps Project 1
+==> azure-arm: Validating deployment template ...
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> DeploymentName    : 'pkrdpofa9chjugi'
+==> azure-arm: Deploying deployment template ...
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> DeploymentName    : 'pkrdpofa9chjugi'
+==> azure-arm:
+==> azure-arm: Getting the VM's IP address ...
+==> azure-arm:  -> ResourceGroupName   : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> PublicIPAddressName : 'pkripofa9chjugi'
+==> azure-arm:  -> NicName             : 'pkrniofa9chjugi'
+==> azure-arm:  -> Network Connection  : 'PublicEndpoint'
+==> azure-arm:  -> IP Address          : '104.46.62.9'
+==> azure-arm: Waiting for SSH to become available...
+==> azure-arm: Connected to SSH!
+==> azure-arm: Provisioning with shell script: C:\Users\TONNIN~1\AppData\Local\Temp\packer-shell326950855
+==> azure-arm: + echo Hello, World!
+==> azure-arm: Querying the machine's properties ...
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> ComputeName       : 'pkrvmofa9chjugi'
+==> azure-arm:  -> Managed OS Disk   : '/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/pkr-Resource-Group-ofa9chjugi/providers/Microsoft.Compute/disks/pkrosofa9chjugi'
+==> azure-arm: Querying the machine's additional disks properties ... 
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> ComputeName       : 'pkrvmofa9chjugi'
+==> azure-arm: Powering off machine ...
+==> azure-arm:  -> ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> ComputeName       : 'pkrvmofa9chjugi'
+==> azure-arm: Capturing image ...
+==> azure-arm:  -> Compute ResourceGroupName : 'pkr-Resource-Group-ofa9chjugi'
+==> azure-arm:  -> Compute Name              : 'pkrvmofa9chjugi'
+==> azure-arm:  -> Compute Location          : 'west europe'
+==> azure-arm:  -> Image ResourceGroupName   : 'rg-packer'
+==> azure-arm:  -> Image Name                : 'project1image'
+==> azure-arm:  -> Image Location            : 'west europe'
+==> azure-arm: 
+==> azure-arm: Deleting individual resources ...
+==> azure-arm: Adding to deletion queue -> Microsoft.Compute/virtualMachines : 'pkrvmofa9chjugi'
+==> azure-arm: Adding to deletion queue -> Microsoft.Network/networkInterfaces : 'pkrniofa9chjugi'
+==> azure-arm: Adding to deletion queue -> Microsoft.Network/publicIPAddresses : 'pkripofa9chjugi'
+==> azure-arm: Adding to deletion queue -> Microsoft.Network/virtualNetworks : 'pkrvnofa9chjugi'
+==> azure-arm: Attempting deletion -> Microsoft.Network/virtualNetworks : 'pkrvnofa9chjugi'
+==> azure-arm: Waiting for deletion of all resources...
+==> azure-arm: Attempting deletion -> Microsoft.Compute/virtualMachines : 'pkrvmofa9chjugi'
+==> azure-arm: Attempting deletion -> Microsoft.Network/networkInterfaces : 'pkrniofa9chjugi'
+==> azure-arm: Attempting deletion -> Microsoft.Network/publicIPAddresses : 'pkripofa9chjugi'
+==> azure-arm: Error deleting resource. Will retry.
+==> azure-arm: Name: pkripofa9chjugi
+==> azure-arm: Error: network.PublicIPAddressesClient#Delete: Failure sending request: StatusCode=400 -- Original Error: Code="PublicIPAddressCannotBeDeleted" Message="Public IP address /subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/pkr-Resource-Group-ofa9chjugi/providers/Microsoft.Network/publicIPAddresses/pkripofa9chjugi can not be deleted since it is still allocated to resource /subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/pkr-Resource-Group-ofa9chjugi/providers/Microsoft.Network/networkInterfaces/pkrniofa9chjugi/ipConfigurations/ipconfig. In order to delete the public IP, disassociate/detach the Public IP address from the resource.  To learn how to do this, see aka.ms/deletepublicip." Details=[]
+==> azure-arm:
+==> azure-arm: Error deleting resource. Will retry.
+==> azure-arm: Name: pkrvnofa9chjugi
+==> azure-arm: Error: network.VirtualNetworksClient#Delete: Failure sending request: StatusCode=400 -- Original Error: Code="InUseSubnetCannotBeDeleted" Message="Subnet pkrsnofa9chjugi is in use by /subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/pkr-Resource-Group-ofa9chjugi/providers/Microsoft.Network/networkInterfaces/pkrniofa9chjugi/ipConfigurations/ipconfig and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet." Details=[]
+==> azure-arm:
+==> azure-arm: Attempting deletion -> Microsoft.Network/publicIPAddresses : 'pkripofa9chjugi'
+==> azure-arm: Attempting deletion -> Microsoft.Network/virtualNetworks : 'pkrvnofa9chjugi'
+==> azure-arm:  Deleting -> Microsoft.Compute/disks : '/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/pkr-Resource-Group-ofa9chjugi/providers/Microsoft.Compute/disks/pkrosofa9chjugi'
+==> azure-arm: Removing the created Deployment object: 'pkrdpofa9chjugi'
+==> azure-arm: 
+==> azure-arm: Cleanup requested, deleting resource group ...
+==> azure-arm: Resource group has been deleted.
+Build 'azure-arm' finished after 7 minutes 15 seconds.
+
+==> Wait completed after 7 minutes 15 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> azure-arm: Azure.ResourceManagement.VMImage:
+
+OSType: Linux
+ManagedImageResourceGroupName: rg-packer
+ManagedImageName: project1image
+ManagedImageId: /subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-packer/providers/Microsoft.Compute/images/project1image
+ManagedImageLocation: west europe

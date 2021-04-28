@@ -1,0 +1,80 @@
+azurerm_resource_group.main: Creating...
+azurerm_resource_group.main: Creation complete after 0s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1]
+azurerm_managed_disk.main[0]: Creating...
+azurerm_availability_set.main: Creating...
+azurerm_public_ip.publicip: Creating...
+azurerm_virtual_network.main: Creating...
+azurerm_managed_disk.main[1]: Creating...
+azurerm_network_security_group.main: Creating...
+azurerm_availability_set.main: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/availabilitySets/udacity-aset]
+azurerm_public_ip.publicip: Creation complete after 2s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/publicIPAddresses/udacity-ip]
+azurerm_lb.main: Creating...
+azurerm_managed_disk.main[0]: Creation complete after 3s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/disks/udacity-0-datadisk]
+azurerm_managed_disk.main[1]: Creation complete after 3s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/disks/udacity-1-datadisk]
+azurerm_lb.main: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb]
+azurerm_lb_backend_address_pool.main: Creating...
+azurerm_lb_probe.main: Creating...
+azurerm_lb_probe.main: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb/probes/udacity-probe]
+azurerm_lb_backend_address_pool.main: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb/backendAddressPools/BackendPool]
+azurerm_lb_rule.main: Creating...
+azurerm_virtual_network.main: Creation complete after 4s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/virtualNetworks/udacity-network]
+azurerm_network_security_group.main: Creation complete after 4s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkSecurityGroups/udacity-nsg]
+azurerm_subnet.main: Creating...
+azurerm_lb_rule.main: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb/loadBalancingRules/http]
+azurerm_subnet.main: Creation complete after 3s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/virtualNetworks/udacity-network/subnets/VMs]
+azurerm_network_interface.main[1]: Creating...
+azurerm_network_interface.main[0]: Creating...
+azurerm_subnet_network_security_group_association.main: Creating...
+azurerm_subnet_network_security_group_association.main: Creation complete after 4s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/virtualNetworks/udacity-network/subnets/VMs]
+azurerm_network_interface.main[1]: Creation complete after 4s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-1-nic]
+azurerm_network_interface.main[0]: Creation complete after 5s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-0-nic]
+azurerm_network_interface_security_group_association.main[0]: Creating...
+azurerm_network_interface_backend_address_pool_association.main[0]: Creating...
+azurerm_linux_virtual_machine.main[0]: Creating...
+azurerm_network_interface_backend_address_pool_association.main[1]: Creating...
+azurerm_linux_virtual_machine.main[1]: Creating...
+azurerm_network_interface_security_group_association.main[1]: Creating...
+azurerm_network_interface_security_group_association.main[0]: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-0-nic|/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkSecurityGroups/udacity-nsg]
+azurerm_network_interface_backend_address_pool_association.main[1]: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-1-nic/ipConfigurations/udacity-ipconf|/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb/backendAddressPools/BackendPool]
+azurerm_network_interface_security_group_association.main[1]: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-1-nic|/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkSecurityGroups/udacity-nsg]
+azurerm_network_interface_backend_address_pool_association.main[0]: Creation complete after 1s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/networkInterfaces/udacity-0-nic/ipConfigurations/udacity-ipconf|/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Network/loadBalancers/udacity-lb/backendAddressPools/BackendPool]
+azurerm_linux_virtual_machine.main[0]: Still creating... [10s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [10s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [20s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [20s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [30s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [30s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [40s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [40s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [50s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [50s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [1m0s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [1m0s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [1m10s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [1m10s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [1m20s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [1m20s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [1m30s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [1m30s elapsed]
+azurerm_linux_virtual_machine.main[0]: Still creating... [1m40s elapsed]
+azurerm_linux_virtual_machine.main[1]: Still creating... [1m40s elapsed]
+azurerm_linux_virtual_machine.main[1]: Creation complete after 1m46s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/virtualMachines/udacity-1-vm]
+azurerm_linux_virtual_machine.main[0]: Creation complete after 1m46s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/virtualMachines/udacity-0-vm]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Creating...
+azurerm_virtual_machine_data_disk_attachment.main[0]: Creating...
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [10s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [10s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [20s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [20s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [30s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [30s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [40s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [40s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [50s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [50s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Still creating... [1m0s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Still creating... [1m0s elapsed]
+azurerm_virtual_machine_data_disk_attachment.main[1]: Creation complete after 1m0s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/virtualMachines/udacity-1-vm/dataDisks/udacity-1-datadisk]
+azurerm_virtual_machine_data_disk_attachment.main[0]: Creation complete after 1m0s [id=/subscriptions/7d22226c-9d23-4835-b2aa-efe5f5219159/resourceGroups/rg-udacity-devops-project1/providers/Microsoft.Compute/virtualMachines/udacity-0-vm/dataDisks/udacity-0-datadisk]
+
+Apply complete! Resources: 23 added, 0 changed, 0 destroyed.

@@ -1,0 +1,9 @@
+{
+    "tagName": {
+        "type": "String",
+        "metadata": {
+            "displayName": "tag name",
+            "description": "name of the mandatory tag"
+        }
+    }
+}

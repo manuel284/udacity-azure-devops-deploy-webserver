@@ -1,0 +1,15 @@
+# Create the Policy Definition
+az policy definition create \
+    --name tagging-policy \
+    --display-name "tagging policy for indexed resources" \
+    --description "indexed resources in this subscription must have tags" \
+    --rules taggingpolicy.rules.json \
+    --params taggingpolicy.param.json \
+    --mode Indexed
+
+# Create the Policy Assignment
+az policy assignment create \
+    --name tagging-policy-assignment \
+    --display-name "tagging assignment" \
+    --policy tagging-policy \
+    --params "{ \"tagName\": {\"value\": \"Project\"} }"

@@ -1,0 +1,9 @@
+prefix = "udacity"
+rgname = "rg-udacity-devops-project1"
+location = "west europe"
+username = "vmuser"
+password = "K1LdSFLI3423A!§234k"
+vm-count = 2
+packer_rg = "rg-packer"
+packer_image_name = "project1image"
+project = "DevOps Project 1"
